@@ -22,6 +22,10 @@
     [super viewDidLoad];
     
     self.deck = [self constructsDeck];
+	
+	LXReorderableCollectionViewFlowLayout *layout = (LXReorderableCollectionViewFlowLayout*)self.collectionView.collectionViewLayout;
+	layout.minimumPressDuration = 0.6;
+	layout.selectedItemZoomFactor = 1.2;
 }
 
 - (NSMutableArray *)constructsDeck {
